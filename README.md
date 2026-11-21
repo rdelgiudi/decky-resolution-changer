@@ -14,6 +14,22 @@ Built for a Legion Go 2 running Bazzite in Game Mode, but it should work on any 
 
 ## Installation
 
+### One-step install
+
+Switch to Desktop Mode, open Konsole, and run:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/rdelgiudi/decky-resolution-changer/main/install.sh | bash
+```
+
+This downloads the latest release, installs or updates it in `~/homebrew/plugins`, and restarts Decky. It asks for your sudo password. On SteamOS the `deck` user has no password by default, so set one first with `passwd`. Run the same command again to update.
+
+To pass options, add `-s --` before them, for example to uninstall:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/rdelgiudi/decky-resolution-changer/main/install.sh | bash -s -- --uninstall
+```
+
 ### From a release zip
 
 1. Download `decky-resolution-changer.zip` from the releases page.
@@ -23,7 +39,7 @@ Built for a Legion Go 2 running Bazzite in Game Mode, but it should work on any 
 ### From source (on the device)
 
 ```sh
-git clone https://git.giudi.me/rdelgiudi/decky-resolution-changer.git
+git clone https://github.com/rdelgiudi/decky-resolution-changer.git
 cd decky-resolution-changer
 ./install.sh
 ```
@@ -32,8 +48,9 @@ cd decky-resolution-changer
 
 | Option | Effect |
 | --- | --- |
+| `--release` | Install the latest GitHub release instead of building |
+| `--repo OWNER/NAME` | Install the latest release of another GitHub repo (e.g. a fork) |
 | `--zip FILE\|URL` | Install a prebuilt plugin zip from a local path or URL |
-| `--repo OWNER/NAME` | Install the latest GitHub release's zip |
 | `--check` | Only report whether an update is available |
 | `--force` | Reinstall even if the installed copy is identical |
 | `--uninstall` | Remove the plugin (settings and logs are kept) |

@@ -1,0 +1,11 @@
+{
+  "name": "Dock Resolution",
+  "author": "rdelgiudi",
+  "flags": [],
+  "api_version": 1,
+  "publish": {
+    "tags": ["display", "resolution", "dock"],
+    "description": "Switches Steam's Maximum Game Resolution between a handheld and a docked value when an external display connects or disconnects.",
+    "image": "https://opengraph.githubassets.com/1/SteamDeckHomebrew/PluginLoader"
+  }
+}
